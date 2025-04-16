@@ -70,7 +70,7 @@ void schedule(){
     struct tcb *tsk = g_task_head;
     struct tcb *select = NULL;
     while (tsk!=NULL){
-        tsk->priority = PRI_USER_MAX - fixedpt_toint((tsk->estcpu)/4) - (tsk->nice+NZERO) *2;
+        tsk->priority = PRI_USER_MAX - fixedpt_toint((tsk->estcpu)/4) - (tsk->nice) *2;
         if (tsk->priority < PRI_USER_MIN)
             tsk->priority = PRI_USER_MIN;
         if (tsk->priority > PRI_USER_MAX)

@@ -127,158 +127,158 @@ LOAD ../lib/tlsf/tlsf.o
  .text          0xc0101a1c      0x2c8 kbd.o
                 0xc0101a1c                isr_keyboard
                 0xc0101cc0                sys_getchar
- .text          0xc0101ce4      0x370 timer.o
+ .text          0xc0101ce4      0x36c timer.o
                 0xc0101d60                isr_timer
-                0xc0101eb0                calibrate_delay
-                0xc0101fbc                sys_sleep
-                0xc0101fd4                sys_nanosleep
- .text          0xc0102054     0x17dc machdep.o
-                0xc0102054                enable_irq
-                0xc010208c                disable_irq
-                0xc01020c4                switch_to
-                0xc01020f0                sys_time
-                0xc0102108                sys_getpriority
-                0xc0102140                sys_setpriority
-                0xc0102180                sys_putchar
-                0xc01022ac                sys_beep
-                0xc01022ec                syscall
-                0xc01027b0                do_page_fault
-                0xc0102848                exception
-                0xc0102d44                cstart
- .text          0xc0103830      0x5bc task.o
-                0xc0103830                schedule
-                0xc0103948                sleep_on
-                0xc01039b0                wake_up
-                0xc01039d8                get_task
-                0xc01039fc                sys_task_create
-                0xc0103c74                sys_task_exit
-                0xc0103cc4                sys_task_wait
-                0xc0103d74                sys_task_getid
-                0xc0103d88                sys_task_yield
-                0xc0103d9c                init_task
- .text          0xc0103dec       0xa0 mktime.o
-                0xc0103dec                mktime
- .text          0xc0103e8c       0x20 sem.o
-                0xc0103e8c                sys_sem_create
-                0xc0103e94                sys_sem_destroy
-                0xc0103e9c                sys_sem_wait
-                0xc0103ea4                sys_sem_signal
- .text          0xc0103eac      0x3c0 page.o
-                0xc0103eac                init_vmspace
-                0xc0103ef0                page_alloc_in_addr
-                0xc0104008                page_alloc
-                0xc0104128                page_free
-                0xc01041bc                page_prot
-                0xc0104200                page_map
-                0xc010423c                page_unmap
- .text          0xc010426c      0x2f0 startup.o
-                0xc010426c                isr_default
-                0xc0104270                DFS_ReadSector
-                0xc01042bc                DFS_WriteSector
-                0xc0104308                start_user_task
-                0xc0104498                mi_startup
- .text          0xc010455c      0x2b8 frame.o
-                0xc010455c                init_frame
-                0xc0104674                frame_alloc_in_addr
-                0xc010470c                frame_alloc
-                0xc01047a8                frame_free
- .text          0xc0104814       0xc0 kmalloc.o
-                0xc0104814                kmalloc
-                0xc0104838                krealloc
-                0xc0104864                kfree
-                0xc0104888                kmemalign
-                0xc01048b4                init_kmalloc
- .text          0xc01048d4     0x2024 dosfs.o
-                0xc01048d4                ldiv
-                0xc01048f0                div
-                0xc010490c                DFS_GetPtnStart
-                0xc01049e8                DFS_GetVolInfo
-                0xc0104ba4                DFS_GetFAT
-                0xc0104dc4                DFS_SetFAT
-                0xc01051b0                DFS_CanonicalToDir
-                0xc0105224                DFS_GetFreeFAT
-                0xc0105284                DFS_GetNext
-                0xc0105418                DFS_OpenDir
-                0xc0105694                DFS_GetFreeDirEnt
-                0xc0105814                DFS_OpenFile
-                0xc0105cc0                DFS_ReadFile
-                0xc010601c                DFS_Seek
-                0xc01061fc                DFS_UnlinkFile
-                0xc0106320                DFS_WriteFile
-                0xc01068f4                DFS_Close
- .text          0xc01068f8      0x360 pe.o
-                0xc01068f8                load_aout
- .text          0xc0106c58        0x0 elf.o
- .text          0xc0106c58       0x58 printk.o
-                0xc0106c58                printk
- .text          0xc0106cb0      0x464 bitmap.o
-                0xc0106cb0                bitmap_buf_size
-                0xc0106cc4                bitmap_size
-                0xc0106ccc                bitmap_set
-                0xc0106cfc                bitmap_mark
-                0xc0106d1c                bitmap_reset
-                0xc0106d3c                bitmap_flip
-                0xc0106d5c                bitmap_test
-                0xc0106d80                bitmap_set_multiple
-                0xc0106dc0                bitmap_set_all
-                0xc0106dec                bitmap_create_in_buf
-                0xc0106e18                bitmap_count
-                0xc0106e68                bitmap_contains
-                0xc0106edc                bitmap_any
-                0xc0106f3c                bitmap_none
-                0xc0106f98                bitmap_all
-                0xc0106ff4                bitmap_scan
-                0xc01070b8                bitmap_scan_and_flip
- .text          0xc0107114      0x224 ../lib/softfloat.o
-                0xc0107114                __udivmoddi4
-                0xc01071cc                __divdi3
-                0xc0107234                __moddi3
-                0xc01072b8                __udivdi3
-                0xc01072ec                __umoddi3
- .text          0xc0107338      0x358 ../lib/string.o
-                0xc0107338                memcmp
-                0xc0107360                memmove
-                0xc01073b0                memchr
-                0xc01073d8                strcat
-                0xc01073fc                strcmp
-                0xc0107428                strncmp
-                0xc0107474                strchr
-                0xc0107498                strrchr
-                0xc01074bc                strstr
-                0xc010755c                strcpy
-                0xc010757c                strlen
-                0xc0107594                strncpy
-                0xc01075d8                strcasecmp
-                0xc0107620                strncasecmp
- .text          0xc0107690      0x530 ../lib/memcpy.o
-                0xc0107690                memcpy
- .text          0xc0107bc0       0x9c ../lib/memset.o
-                0xc0107bc0                memset
- .text          0xc0107c5c     0x1680 ../lib/snprintf.o
-                0xc0108bc0                vsnprintf
-                0xc01092b0                snprintf
- .text          0xc01092dc      0x9b4 ../lib/tlsf/tlsf.o
-                0xc0109658                tlsf_check
-                0xc010975c                tlsf_walk_pool
-                0xc01097c8                tlsf_block_size
-                0xc01097dc                tlsf_check_pool
-                0xc0109814                tlsf_size
-                0xc010981c                tlsf_align_size
-                0xc0109824                tlsf_block_size_min
-                0xc010982c                tlsf_block_size_max
-                0xc0109834                tlsf_pool_overhead
-                0xc010983c                tlsf_alloc_overhead
-                0xc0109844                tlsf_add_pool
-                0xc0109894                tlsf_remove_pool
-                0xc01098dc                tlsf_create
-                0xc0109928                tlsf_create_with_pool
-                0xc01099a4                tlsf_destroy
-                0xc01099a8                tlsf_get_pool
-                0xc01099b4                tlsf_malloc
-                0xc01099e0                tlsf_memalign
-                0xc0109ac0                tlsf_free
-                0xc0109b34                tlsf_realloc
-                0xc0109c90                . = ALIGN (0x4)
+                0xc0101eac                calibrate_delay
+                0xc0101fb8                sys_sleep
+                0xc0101fd0                sys_nanosleep
+ .text          0xc0102050     0x17dc machdep.o
+                0xc0102050                enable_irq
+                0xc0102088                disable_irq
+                0xc01020c0                switch_to
+                0xc01020ec                sys_time
+                0xc0102104                sys_getpriority
+                0xc010213c                sys_setpriority
+                0xc010217c                sys_putchar
+                0xc01022a8                sys_beep
+                0xc01022e8                syscall
+                0xc01027ac                do_page_fault
+                0xc0102844                exception
+                0xc0102d40                cstart
+ .text          0xc010382c      0x5b4 task.o
+                0xc010382c                schedule
+                0xc010393c                sleep_on
+                0xc01039a4                wake_up
+                0xc01039cc                get_task
+                0xc01039f0                sys_task_create
+                0xc0103c68                sys_task_exit
+                0xc0103cb8                sys_task_wait
+                0xc0103d68                sys_task_getid
+                0xc0103d7c                sys_task_yield
+                0xc0103d90                init_task
+ .text          0xc0103de0       0xa0 mktime.o
+                0xc0103de0                mktime
+ .text          0xc0103e80       0x20 sem.o
+                0xc0103e80                sys_sem_create
+                0xc0103e88                sys_sem_destroy
+                0xc0103e90                sys_sem_wait
+                0xc0103e98                sys_sem_signal
+ .text          0xc0103ea0      0x3c0 page.o
+                0xc0103ea0                init_vmspace
+                0xc0103ee4                page_alloc_in_addr
+                0xc0103ffc                page_alloc
+                0xc010411c                page_free
+                0xc01041b0                page_prot
+                0xc01041f4                page_map
+                0xc0104230                page_unmap
+ .text          0xc0104260      0x2f0 startup.o
+                0xc0104260                isr_default
+                0xc0104264                DFS_ReadSector
+                0xc01042b0                DFS_WriteSector
+                0xc01042fc                start_user_task
+                0xc010448c                mi_startup
+ .text          0xc0104550      0x2b8 frame.o
+                0xc0104550                init_frame
+                0xc0104668                frame_alloc_in_addr
+                0xc0104700                frame_alloc
+                0xc010479c                frame_free
+ .text          0xc0104808       0xc0 kmalloc.o
+                0xc0104808                kmalloc
+                0xc010482c                krealloc
+                0xc0104858                kfree
+                0xc010487c                kmemalign
+                0xc01048a8                init_kmalloc
+ .text          0xc01048c8     0x2024 dosfs.o
+                0xc01048c8                ldiv
+                0xc01048e4                div
+                0xc0104900                DFS_GetPtnStart
+                0xc01049dc                DFS_GetVolInfo
+                0xc0104b98                DFS_GetFAT
+                0xc0104db8                DFS_SetFAT
+                0xc01051a4                DFS_CanonicalToDir
+                0xc0105218                DFS_GetFreeFAT
+                0xc0105278                DFS_GetNext
+                0xc010540c                DFS_OpenDir
+                0xc0105688                DFS_GetFreeDirEnt
+                0xc0105808                DFS_OpenFile
+                0xc0105cb4                DFS_ReadFile
+                0xc0106010                DFS_Seek
+                0xc01061f0                DFS_UnlinkFile
+                0xc0106314                DFS_WriteFile
+                0xc01068e8                DFS_Close
+ .text          0xc01068ec      0x360 pe.o
+                0xc01068ec                load_aout
+ .text          0xc0106c4c        0x0 elf.o
+ .text          0xc0106c4c       0x58 printk.o
+                0xc0106c4c                printk
+ .text          0xc0106ca4      0x464 bitmap.o
+                0xc0106ca4                bitmap_buf_size
+                0xc0106cb8                bitmap_size
+                0xc0106cc0                bitmap_set
+                0xc0106cf0                bitmap_mark
+                0xc0106d10                bitmap_reset
+                0xc0106d30                bitmap_flip
+                0xc0106d50                bitmap_test
+                0xc0106d74                bitmap_set_multiple
+                0xc0106db4                bitmap_set_all
+                0xc0106de0                bitmap_create_in_buf
+                0xc0106e0c                bitmap_count
+                0xc0106e5c                bitmap_contains
+                0xc0106ed0                bitmap_any
+                0xc0106f30                bitmap_none
+                0xc0106f8c                bitmap_all
+                0xc0106fe8                bitmap_scan
+                0xc01070ac                bitmap_scan_and_flip
+ .text          0xc0107108      0x224 ../lib/softfloat.o
+                0xc0107108                __udivmoddi4
+                0xc01071c0                __divdi3
+                0xc0107228                __moddi3
+                0xc01072ac                __udivdi3
+                0xc01072e0                __umoddi3
+ .text          0xc010732c      0x358 ../lib/string.o
+                0xc010732c                memcmp
+                0xc0107354                memmove
+                0xc01073a4                memchr
+                0xc01073cc                strcat
+                0xc01073f0                strcmp
+                0xc010741c                strncmp
+                0xc0107468                strchr
+                0xc010748c                strrchr
+                0xc01074b0                strstr
+                0xc0107550                strcpy
+                0xc0107570                strlen
+                0xc0107588                strncpy
+                0xc01075cc                strcasecmp
+                0xc0107614                strncasecmp
+ .text          0xc0107684      0x530 ../lib/memcpy.o
+                0xc0107684                memcpy
+ .text          0xc0107bb4       0x9c ../lib/memset.o
+                0xc0107bb4                memset
+ .text          0xc0107c50     0x1680 ../lib/snprintf.o
+                0xc0108bb4                vsnprintf
+                0xc01092a4                snprintf
+ .text          0xc01092d0      0x9b4 ../lib/tlsf/tlsf.o
+                0xc010964c                tlsf_check
+                0xc0109750                tlsf_walk_pool
+                0xc01097bc                tlsf_block_size
+                0xc01097d0                tlsf_check_pool
+                0xc0109808                tlsf_size
+                0xc0109810                tlsf_align_size
+                0xc0109818                tlsf_block_size_min
+                0xc0109820                tlsf_block_size_max
+                0xc0109828                tlsf_pool_overhead
+                0xc0109830                tlsf_alloc_overhead
+                0xc0109838                tlsf_add_pool
+                0xc0109888                tlsf_remove_pool
+                0xc01098d0                tlsf_create
+                0xc010991c                tlsf_create_with_pool
+                0xc0109998                tlsf_destroy
+                0xc010999c                tlsf_get_pool
+                0xc01099a8                tlsf_malloc
+                0xc01099d4                tlsf_memalign
+                0xc0109ab4                tlsf_free
+                0xc0109b28                tlsf_realloc
+                0xc0109c84                . = ALIGN (0x4)
 
 .rodata
  *(.rodata)
@@ -421,25 +421,25 @@ OUTPUT(eposkrnl.out pei-i386)
  .debug_info    0x00000e6a      0x90d pci.o
  .debug_info    0x00001777      0xc19 vm86.o
  .debug_info    0x00002390      0x72c kbd.o
- .debug_info    0x00002abc      0x9b9 timer.o
- .debug_info    0x00003475     0x3997 machdep.o
- .debug_info    0x00006e0c      0x9a4 task.o
- .debug_info    0x000077b0      0x1e9 mktime.o
- .debug_info    0x00007999      0x1c7 sem.o
- .debug_info    0x00007b60      0x549 page.o
- .debug_info    0x000080a9      0xe41 startup.o
- .debug_info    0x00008eea      0x5e8 frame.o
- .debug_info    0x000094d2      0x3ee kmalloc.o
- .debug_info    0x000098c0     0x26de dosfs.o
- .debug_info    0x0000bf9e     0x112c pe.o
- .debug_info    0x0000d0ca      0x230 printk.o
- .debug_info    0x0000d2fa      0xdb8 bitmap.o
- .debug_info    0x0000e0b2      0x356 ../lib/softfloat.o
- .debug_info    0x0000e408      0x6a7 ../lib/string.o
- .debug_info    0x0000eaaf      0x2d1 ../lib/memcpy.o
- .debug_info    0x0000ed80      0x18b ../lib/memset.o
- .debug_info    0x0000ef0b      0xe9f ../lib/snprintf.o
- .debug_info    0x0000fdaa     0x2c78 ../lib/tlsf/tlsf.o
+ .debug_info    0x00002abc      0x9c6 timer.o
+ .debug_info    0x00003482     0x3997 machdep.o
+ .debug_info    0x00006e19      0x9b1 task.o
+ .debug_info    0x000077ca      0x1e9 mktime.o
+ .debug_info    0x000079b3      0x1c7 sem.o
+ .debug_info    0x00007b7a      0x549 page.o
+ .debug_info    0x000080c3      0xe41 startup.o
+ .debug_info    0x00008f04      0x5e8 frame.o
+ .debug_info    0x000094ec      0x3ee kmalloc.o
+ .debug_info    0x000098da     0x26de dosfs.o
+ .debug_info    0x0000bfb8     0x112c pe.o
+ .debug_info    0x0000d0e4      0x230 printk.o
+ .debug_info    0x0000d314      0xdb8 bitmap.o
+ .debug_info    0x0000e0cc      0x363 ../lib/softfloat.o
+ .debug_info    0x0000e42f      0x6b4 ../lib/string.o
+ .debug_info    0x0000eae3      0x2de ../lib/memcpy.o
+ .debug_info    0x0000edc1      0x198 ../lib/memset.o
+ .debug_info    0x0000ef59      0xeac ../lib/snprintf.o
+ .debug_info    0x0000fe05     0x2c85 ../lib/tlsf/tlsf.o
 
 .debug_abbrev   0x00000000     0x2e00
  .debug_abbrev  0x00000000      0x1ae ide.o

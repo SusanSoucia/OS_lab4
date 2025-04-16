@@ -58,7 +58,7 @@ void isr_timer(uint32_t irq, struct context *ctx)
 			ratio = fixedpt_div(ratio, fixedpt_add(ratio, FIXEDPT_ONE));
       while(tsk!=NULL){//为所有进程更新estcpu
         if (tsk->state == TASK_STATE_READY){nready++;}
-        tsk->estcpu = fixedpt_add(fixedpt_mul(ratio,tsk->estcpu),fixedpt_fromint(tsk->nice+NZERO));
+        tsk->estcpu = fixedpt_add(fixedpt_mul(ratio,tsk->estcpu),fixedpt_fromint(tsk->nice));
         tsk = tsk->next;
     }
 

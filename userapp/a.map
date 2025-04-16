@@ -446,13 +446,13 @@ LOAD ../lib/tlsf/tlsf.o
  .debug_info    0x00410dbd      0x566 lib/stdio.o
  .debug_info    0x00411323      0x813 lib/stdlib.o
  .debug_info    0x00411b36      0xe1c lib/qsort.o
- .debug_info    0x00412952      0x357 ../lib/softfloat.o
- .debug_info    0x00412ca9      0x6a8 ../lib/string.o
- .debug_info    0x00413351      0x2d2 ../lib/memcpy.o
- .debug_info    0x00413623      0x18c ../lib/memset.o
- .debug_info    0x004137af      0xea0 ../lib/snprintf.o
- .debug_info    0x0041464f      0x34e lib/malloc.o
- .debug_info    0x0041499d     0x2c79 ../lib/tlsf/tlsf.o
+ .debug_info    0x00412952      0x364 ../lib/softfloat.o
+ .debug_info    0x00412cb6      0x6b5 ../lib/string.o
+ .debug_info    0x0041336b      0x2df ../lib/memcpy.o
+ .debug_info    0x0041364a      0x199 ../lib/memset.o
+ .debug_info    0x004137e3      0xead ../lib/snprintf.o
+ .debug_info    0x00414690      0x34e lib/malloc.o
+ .debug_info    0x004149de     0x2c86 ../lib/tlsf/tlsf.o
 
 .debug_abbrev   0x00418000     0x1a00
  *(.debug_abbrev)
