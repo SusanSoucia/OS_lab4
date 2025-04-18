@@ -24,7 +24,7 @@
 
 /*记录系统启动以来，定时器中断的次数*/
 unsigned volatile g_timer_ticks = 0;
-g_load_avg = 0;
+int g_load_avg = 0;
 
 /**
  * 定时器的中断处理程序

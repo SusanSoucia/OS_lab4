@@ -417,29 +417,29 @@ LOAD ../lib/tlsf/tlsf.o
 OUTPUT(eposkrnl.out pei-i386)
 
 .debug_info     0x00000000    0x12c00
- .debug_info    0x00000000      0xe6a ide.o
- .debug_info    0x00000e6a      0x90d pci.o
- .debug_info    0x00001777      0xc19 vm86.o
- .debug_info    0x00002390      0x72c kbd.o
- .debug_info    0x00002abc      0x9c6 timer.o
- .debug_info    0x00003482     0x3997 machdep.o
- .debug_info    0x00006e19      0x9b1 task.o
- .debug_info    0x000077ca      0x1e9 mktime.o
- .debug_info    0x000079b3      0x1c7 sem.o
- .debug_info    0x00007b7a      0x549 page.o
- .debug_info    0x000080c3      0xe41 startup.o
- .debug_info    0x00008f04      0x5e8 frame.o
- .debug_info    0x000094ec      0x3ee kmalloc.o
- .debug_info    0x000098da     0x26de dosfs.o
- .debug_info    0x0000bfb8     0x112c pe.o
- .debug_info    0x0000d0e4      0x230 printk.o
- .debug_info    0x0000d314      0xdb8 bitmap.o
- .debug_info    0x0000e0cc      0x363 ../lib/softfloat.o
- .debug_info    0x0000e42f      0x6b4 ../lib/string.o
- .debug_info    0x0000eae3      0x2de ../lib/memcpy.o
- .debug_info    0x0000edc1      0x198 ../lib/memset.o
- .debug_info    0x0000ef59      0xeac ../lib/snprintf.o
- .debug_info    0x0000fe05     0x2c85 ../lib/tlsf/tlsf.o
+ .debug_info    0x00000000      0xe6d ide.o
+ .debug_info    0x00000e6d      0x910 pci.o
+ .debug_info    0x0000177d      0xc1c vm86.o
+ .debug_info    0x00002399      0x72f kbd.o
+ .debug_info    0x00002ac8      0x9c6 timer.o
+ .debug_info    0x0000348e     0x3968 machdep.o
+ .debug_info    0x00006df6      0x9b1 task.o
+ .debug_info    0x000077a7      0x1de mktime.o
+ .debug_info    0x00007985      0x1ca sem.o
+ .debug_info    0x00007b4f      0x54c page.o
+ .debug_info    0x0000809b      0xe44 startup.o
+ .debug_info    0x00008edf      0x5eb frame.o
+ .debug_info    0x000094ca      0x3e3 kmalloc.o
+ .debug_info    0x000098ad     0x26d3 dosfs.o
+ .debug_info    0x0000bf80     0x112f pe.o
+ .debug_info    0x0000d0af      0x233 printk.o
+ .debug_info    0x0000d2e2      0xdad bitmap.o
+ .debug_info    0x0000e08f      0x363 ../lib/softfloat.o
+ .debug_info    0x0000e3f2      0x6b4 ../lib/string.o
+ .debug_info    0x0000eaa6      0x2de ../lib/memcpy.o
+ .debug_info    0x0000ed84      0x198 ../lib/memset.o
+ .debug_info    0x0000ef1c      0xeac ../lib/snprintf.o
+ .debug_info    0x0000fdc8     0x2c85 ../lib/tlsf/tlsf.o
 
 .debug_abbrev   0x00000000     0x2e00
  .debug_abbrev  0x00000000      0x1ae ide.o
@@ -447,24 +447,24 @@ OUTPUT(eposkrnl.out pei-i386)
  .debug_abbrev  0x000003cc      0x253 vm86.o
  .debug_abbrev  0x0000061f      0x197 kbd.o
  .debug_abbrev  0x000007b6      0x241 timer.o
- .debug_abbrev  0x000009f7      0x49d machdep.o
- .debug_abbrev  0x00000e94      0x342 task.o
- .debug_abbrev  0x000011d6       0xb5 mktime.o
- .debug_abbrev  0x0000128b       0x64 sem.o
- .debug_abbrev  0x000012ef      0x1c5 page.o
- .debug_abbrev  0x000014b4      0x217 startup.o
- .debug_abbrev  0x000016cb      0x17a frame.o
- .debug_abbrev  0x00001845       0xfe kmalloc.o
- .debug_abbrev  0x00001943      0x33f dosfs.o
- .debug_abbrev  0x00001c82      0x1e2 pe.o
- .debug_abbrev  0x00001e64       0xfa printk.o
- .debug_abbrev  0x00001f5e      0x2e7 bitmap.o
- .debug_abbrev  0x00002245      0x131 ../lib/softfloat.o
- .debug_abbrev  0x00002376      0x184 ../lib/string.o
- .debug_abbrev  0x000024fa       0xab ../lib/memcpy.o
- .debug_abbrev  0x000025a5       0x85 ../lib/memset.o
- .debug_abbrev  0x0000262a      0x21d ../lib/snprintf.o
- .debug_abbrev  0x00002847      0x4b6 ../lib/tlsf/tlsf.o
+ .debug_abbrev  0x000009f7      0x49f machdep.o
+ .debug_abbrev  0x00000e96      0x342 task.o
+ .debug_abbrev  0x000011d8       0xb5 mktime.o
+ .debug_abbrev  0x0000128d       0x64 sem.o
+ .debug_abbrev  0x000012f1      0x1c5 page.o
+ .debug_abbrev  0x000014b6      0x217 startup.o
+ .debug_abbrev  0x000016cd      0x17a frame.o
+ .debug_abbrev  0x00001847       0xfe kmalloc.o
+ .debug_abbrev  0x00001945      0x33f dosfs.o
+ .debug_abbrev  0x00001c84      0x1e2 pe.o
+ .debug_abbrev  0x00001e66       0xfa printk.o
+ .debug_abbrev  0x00001f60      0x2e7 bitmap.o
+ .debug_abbrev  0x00002247      0x131 ../lib/softfloat.o
+ .debug_abbrev  0x00002378      0x184 ../lib/string.o
+ .debug_abbrev  0x000024fc       0xab ../lib/memcpy.o
+ .debug_abbrev  0x000025a7       0x85 ../lib/memset.o
+ .debug_abbrev  0x0000262c      0x21d ../lib/snprintf.o
+ .debug_abbrev  0x00002849      0x4b6 ../lib/tlsf/tlsf.o
 
 .debug_loc      0x00000000    0x10000
  .debug_loc     0x00000000      0xcfc ide.o
@@ -568,17 +568,17 @@ OUTPUT(eposkrnl.out pei-i386)
 .debug_str      0x00000000      0x400
  .debug_str     0x00000000        0xf pci.o
  .debug_str     0x0000000f        0xc vm86.o
- .debug_str     0x0000001b       0x37 machdep.o
- .debug_str     0x00000052       0x10 task.o
- .debug_str     0x00000062        0xd page.o
- .debug_str     0x0000006f        0x8 frame.o
- .debug_str     0x00000077        0xc kmalloc.o
- .debug_str     0x00000083       0xb5 dosfs.o
- .debug_str     0x00000138       0x28 pe.o
- .debug_str     0x00000160       0x1c bitmap.o
- .debug_str     0x0000017c       0x17 ../lib/memcpy.o
- .debug_str     0x00000193       0x53 ../lib/snprintf.o
- .debug_str     0x000001e6       0x6e ../lib/tlsf/tlsf.o
+ .debug_str     0x0000001b       0x2e machdep.o
+ .debug_str     0x00000049       0x10 task.o
+ .debug_str     0x00000059        0xd page.o
+ .debug_str     0x00000066        0x8 frame.o
+ .debug_str     0x0000006e        0xc kmalloc.o
+ .debug_str     0x0000007a       0xb5 dosfs.o
+ .debug_str     0x0000012f       0x28 pe.o
+ .debug_str     0x00000157       0x1c bitmap.o
+ .debug_str     0x00000173       0x17 ../lib/memcpy.o
+ .debug_str     0x0000018a       0x53 ../lib/snprintf.o
+ .debug_str     0x000001dd       0x6e ../lib/tlsf/tlsf.o
 
 .debug_ranges   0x00000000     0x1000
  .debug_ranges  0x00000000      0x280 vm86.o

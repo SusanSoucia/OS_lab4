@@ -414,6 +414,9 @@ time_t sys_time()
    实验三：int sys_getpriority(int tid)
             int sys_setpriority(int tid, int priority)
    */
+
+extern struct tcb* get_task(int tid);
+
 int sys_getpriority(int tid){
 	struct tcb * tsk;
 	uint32_t flags;

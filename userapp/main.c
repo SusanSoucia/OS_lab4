@@ -124,14 +124,10 @@ void main(void *pv)
     init_graphic(0x115);
     // list_graphic_modes();
     unsigned char*stack_foo1;
-    unsigned char*stack_foo2;
     unsigned char*stack_foo3;
-    unsigned char*stack_foo4;
     unsigned int stack_size = 1024*1024;
     stack_foo1 = (unsigned char*)malloc(stack_size);
-    stack_foo2 = (unsigned char*)malloc(stack_size);
     stack_foo3 = (unsigned char*)malloc(stack_size);
-    stack_foo4 = (unsigned char*)malloc(stack_size);
     //定义数组
     srand(time(NULL));
     int size =100;
@@ -148,7 +144,7 @@ void main(void *pv)
     arg2.lEdge = 0;
 
     drawBoundary(390,0,20,RGB(80,20,100));
-    int tid_foo1;int tid_foo2;int tid_foo3;int tid_foo4;
+    int tid_foo1;int tid_foo3;
     tid_foo1 = task_create(stack_foo1+stack_size, &task_foo1, (void*) &arg1);
     tid_foo3 = task_create(stack_foo3+stack_size, &task_foo3, (void*) &arg2);
     // tid_foo2 = task_create(stack_foo2+stack_size, &task_foo2, NULL);

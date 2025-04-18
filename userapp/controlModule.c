@@ -1,6 +1,4 @@
 #include <syscall.h>
-#include <conio.h>
-
 int pid, cid;
 int full;
 int empty;
@@ -11,6 +9,8 @@ int empty;
 #define LEFT 0x4d00
 #define RIGHT 0x4b00
 
+extern void drawBar(int barSize, int length, int lEdge, int upHead, COLORREF r);
+
 void control(int pid,int cid){
 	int p1 = 20, p2 = 20;
 	
@@ -20,6 +20,18 @@ void control(int pid,int cid){
 	int key;
 	while(1){
 
+		int temp1 = 0;int temp2 = 0;
+		int rightPrio = getpriority(2);
+		if(temp1 != rightPrio)
+			drawBar(15, rightPrio*20, 410, 580, RGB(0,0,255));
+		temp1 = rightPrio;
+	
+		
+		int leftPrio = getpriority(3);
+		if (temp2 != leftPrio)
+			drawBar(15, leftPrio*20, 0, 580, RGB(0,0,255));
+		temp2 = leftPrio;
+			
 		key = getchar();
 		
 		if(UP == key){
@@ -47,18 +59,6 @@ void control(int pid,int cid){
 			}
 		}
 
-		int temp1 = 0;int temp2 = 0;
-    int rightPrio = getpriority(2);
-    if(temp1 != rightPrio)
-        drawBar(15, rightPrio*20, 410, 580, RGB(0,0,255));
-    temp1 = rightPrio;
-
-    
-    int leftPrio = getpriority(3);
-    if (temp2 != leftPrio)
-        drawBar(15, leftPrio*20, 0, 580, RGB(0,0,255));
-    temp2 = leftPrio;
-		
 
 	}
 }
