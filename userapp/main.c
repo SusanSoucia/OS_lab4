@@ -141,9 +141,10 @@ void main(void *pv)
     arg1.size = size;
     arg2.size = size;
     arg1.lEdge = 410;
-    arg2.lEdge = 0;
+    arg2.lEdge = 20;
 
     drawBoundary(390,0,20,RGB(80,20,100));
+    drawBoundary(0,0,20,RGB(80,20,100));
     int tid_foo1;int tid_foo3;
     tid_foo1 = task_create(stack_foo1+stack_size, &task_foo1, (void*) &arg1);
     tid_foo3 = task_create(stack_foo3+stack_size, &task_foo3, (void*) &arg2);
