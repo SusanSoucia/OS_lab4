@@ -1,5 +1,5 @@
-#include "drawpic.c"
 
+#include "ssort.h"
 
 
 int* createArray(int size)
@@ -32,6 +32,25 @@ void insertionSort(int arr[],int size,int lEdge)
         {
             drawSwap(arr,j,j-1,lEdge,RGB(255,0,0));    //交换元素
             nanosleep_delay();
+        }
+    }
+}
+
+void bubbleSort(int arr[], int size,int lEdge)
+{
+    drawArr(arr,size,lEdge,RGB(255,0,0));
+    int i, j;
+    for (i = 0; i < size - 1; i++)
+    {
+        for (j = 0; j < size - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                // int temp = arr[j];
+                // arr[j] = arr[j + 1];
+                // arr[j + 1] = temp;
+                drawSwap(arr,j,j+1,lEdge,RGB(255,0,0));    //交换元素
+            }
         }
     }
 }

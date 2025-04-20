@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ssort.h": "c",
+        "graphics.h": "c",
+        "drawpic.h": "c"
+    }
+}

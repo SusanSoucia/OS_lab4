@@ -1,9 +1,10 @@
 #include "graphics.h"
+#include "drawpic.h"
 //#include <stddef.h>    // NULL
 
 struct timespec delay = {
     .tv_sec  = 0,
-    .tv_nsec = 1000 * 1000L
+    .tv_nsec = 50 * 1000L
 };
 
 void nanosleep_delay() {
@@ -13,10 +14,10 @@ void nanosleep_delay() {
 // 画条形图函数：参数意义同原来代码
 void drawBar(int barSize, int length, int lEdge, int upHead, COLORREF r) {
     int i;
-    int drawLength = length / 4;  // 根据原代码计算条宽
+    int drawLength = length / 2;  // 根据原代码计算条宽
 
     for (i = 0; i < barSize; i++) {
-        line(lEdge, upHead + i, lEdge + 300, upHead + i, RGB(0, 0, 0));
+        line(lEdge, upHead + i, lEdge + 100, upHead + i, RGB(0, 0, 0));
     }
 
     for (i = 0; i < barSize; i++) {
@@ -78,5 +79,34 @@ void drawBoundary(int lEdge, int upHead,int size,COLORREF color) {
     int i;
     for(i = 0;i < size; i++) {
         line(lEdge + i, upHead, lEdge + i, upHead + 600, color);
+    }
+}
+
+void drawProcess(int lEdge,int upHead,int size,int length,COLORREF color){
+
+    int i;
+    int drawLength = 800/40*length;  // 根据原代码计算条宽
+
+    for (i = 0; i < size; i++) {
+        line(lEdge, upHead + i, lEdge + 800, upHead + i, RGB(0, 0, 0));
+    }
+
+    for (i = 0; i < size; i++) {
+        if (i%size==0)
+            line(lEdge, upHead + i, lEdge + drawLength, upHead + i, RGB(0,255,0));
+        else
+            line(lEdge, upHead + i, lEdge + drawLength, upHead + i, color);
+    }
+    nanosleep_delay();
+    return;
+}
+
+void clear(int x,int y, int x1, int y1){
+    // 清除指定区域的颜色
+    int i,j;
+    for(i = x; i < x1; i++) {
+        for(j = y; j < y1; j++) {
+            setPixel(i, j, RGB(0, 0, 0));
+        }
     }
 }

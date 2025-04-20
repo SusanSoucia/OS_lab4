@@ -12,6 +12,7 @@ struct semaphore {
 };
 
 
+
 // 改为指针数组，sems数组存储指针，每个指针指向一个动态分配的结构体
 struct semaphore *sems[SEMAPHORE_MAX] = {NULL}; // 初始化为NULL
 
@@ -53,7 +54,7 @@ int sys_sem_destroy(int semid)
     }
     kfree(sems[semid]);
     sems[semid] = NULL; //置空指针
-    return -1;
+    return 0;
 }
 
 int sys_sem_wait(int semid)
