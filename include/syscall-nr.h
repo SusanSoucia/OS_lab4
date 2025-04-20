@@ -40,7 +40,11 @@
 #define SYSCALL_putchar       1000
 #define SYSCALL_getchar       1001
 #define SYSCALL_time          2013  //实验一
-#define SYSCALL_getpriority   2014  //实验二
-#define SYSCALL_setpriority   2015  //实验二
+#define SYSCALL_getpriority   2014  //实验三
+#define SYSCALL_setpriority   2015  //实验三
+#define SYSCALL_sem_create    2016  //实验四
+#define SYSCALL_sem_destroy   2017  //实验四
+#define SYSCALL_sem_wait      2018  //实验四
+#define SYSCALL_sem_signal    2019  //实验四
 
 #endif /*_SYSCALLNR_H*/

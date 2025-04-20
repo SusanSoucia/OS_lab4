@@ -7,8 +7,12 @@
 #include <ioctl.h>
 
 time_t time(time_t *loc); //实验一
-int getpriority(int tid); //实验二
-int setpriority(int tid, int prio); //实验二
+int getpriority(int tid); //实验三
+int setpriority(int tid, int prio); //实验三
+int sem_create(int value); //实验四
+int sem_destroy(int semid); //实验四
+int sem_wait(int semid); //实验四
+int sem_signal(int semid); //实验四
 int task_exit(int code_exit);
 int task_create(void *tos, void (*func)(void *pv), void *pv);
 int task_getid();

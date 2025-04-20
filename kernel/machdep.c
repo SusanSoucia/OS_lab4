@@ -929,6 +929,30 @@ void syscall(struct context *ctx)
         ctx->eax = sys_setpriority(tid, priority);
     }
     break;
+    case SYSCALL_sem_create:
+    {
+        int value = *((int *)(ctx->esp+4));
+        ctx->eax = sys_sem_create(value);
+    }
+    break;
+    case SYSCALL_sem_destroy:
+    {
+        int semid = *((int *)(ctx->esp+4));
+        ctx->eax = sys_sem_destroy(semid);
+    }
+    break;
+    case SYSCALL_sem_wait:
+    {
+        int semid = *((int *)(ctx->esp+4));
+        ctx->eax = sys_sem_wait(semid);
+    }
+    break;
+    case SYSCALL_sem_signal:
+    {
+        int semid = *((int *)(ctx->esp+4));
+        ctx->eax = sys_sem_signal(semid);
+    }
+    break;
     default:
         printk("syscall #%d not implemented.\r\n", ctx->eax);
         ctx->eax = -ctx->eax;
