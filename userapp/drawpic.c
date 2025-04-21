@@ -1,6 +1,7 @@
 #include "graphics.h"
 #include "drawpic.h"
-//#include <stddef.h>    // NULL
+#include <time.h>       // For struct timespec and nanosleep
+#include <stddef.h>    // NULL
 
 struct timespec delay = {
     .tv_sec  = 0,

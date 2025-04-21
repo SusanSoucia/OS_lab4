@@ -1,5 +1,7 @@
 #include "graphics.h"
 
+// drawpic.h
+
 struct timespec delay;
 void nanosleep_delay();
 void drawBar(int barSize, int length, int lEdge, int upHead, COLORREF r);

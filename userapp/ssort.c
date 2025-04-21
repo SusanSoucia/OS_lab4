@@ -1,4 +1,5 @@
-
+#include <stdlib.h>  // 声明 malloc 和 rand
+#include <time.h>    // 可选：如果使用 srand 或时间相关函数
 #include "ssort.h"
 
 
